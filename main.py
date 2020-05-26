@@ -93,7 +93,13 @@ def part_of(word, list_of_words):
 
 url = "http://www.biofiltro.cl/sistema/index.php/admin"
 url_informe = "http://www.biofiltro.cl/sistema/index.php/admin/planta_informe"
-payload = {"username": "mrivera", "password":"biofiltro"}
+username = input("username: ")
+password = input("password: ")
+if not username:
+    username = "mrivera"
+if not password:
+    password = "biofiltro"
+payload = {"username": username, "password":password}
 
 s = requests.Session()
 headers = {'User-Agent': 'Mozilla/5.0'}
