@@ -95,10 +95,6 @@ url = "http://www.biofiltro.cl/sistema/index.php/admin"
 url_informe = "http://www.biofiltro.cl/sistema/index.php/admin/planta_informe"
 username = input("username: ")
 password = input("password: ")
-if not username:
-    username = "mrivera"
-if not password:
-    password = "biofiltro"
 payload = {"username": username, "password":password}
 
 s = requests.Session()
